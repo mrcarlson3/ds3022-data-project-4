@@ -3,7 +3,7 @@
 Set up an event-driven data pipeline using Amazon S3, Lambda, DynamoDB, and the API Gateway. The aims of this solution are:
 
 1. New data arrives in an S3 bucket. This is a JSON file with an expected format.
-2. This triggers a Lambda function that ingests the data, deserializes the JSON, and inserts it into DynamoDB.
+2. This triggers a Lambda function that ingests the data, deserializes the JSON, and inserts it into a DynamoDB table.
 3. Finally, all data is made available via a `GET` request from a public API.
 
 - - -
@@ -15,6 +15,8 @@ Set up an event-driven data pipeline using Amazon S3, Lambda, DynamoDB, and the 
 [Source Template](dp4-launch-template.yaml)
 
 This assumes that users have an active set of AWS credentials installed locally.
+
+![Overview Image](architecture.png)
 
 This stack creates:
 
